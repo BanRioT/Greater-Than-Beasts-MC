@@ -1,0 +1,15 @@
+version: 2
+
+# Build documentation with MkDocs
+mkdocs:
+  configuration: mkdocs.yml
+
+# Build against Python 3.11 (RTD requires a python env even for MkDocs)
+python:
+  install:
+    - requirements.txt
+
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.11"
