@@ -1,13 +1,12 @@
 version: 2
 
-# Build documentation with MkDocs
-mkdocs:
-  configuration: mkdocs.yml
+# Build documentation with Sphinx (The RTD Native engine)
+sphinx:
+  configuration: conf.py
 
-# Build against Python 3.11 (RTD requires a python env even for MkDocs)
 python:
   install:
-    - requirements.txt
+    - requirements: requirements.txt
 
 build:
   os: ubuntu-22.04
